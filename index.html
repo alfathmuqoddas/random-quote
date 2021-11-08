@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Random Quotes</title>
+  </head>
+  <body onload="randomQuote()">
+    <section class="container my-5">
+    <div id="quote-box" class="shadow p-4 rounded">
+      <div id="text" class="mb-3 h1 text-center"></div>
+      <div id="author" class="mb-3"></div>
+      <button onclick="randomQuote()" id="new-quote" class="btn btn-primary me-3">New Quote</button>
+      <button class="btn btn-primary" id="tweet-btn"></button>
+    </div> 
+      <p class="mt-5">by Alfath Muqoddas</p>
+  </section>
+  
+  <script>
+  const randomQuote = () => {
+    const url = "https://api.quotable.io/random";
+    fetch(url).then(res => res.json()).then(data => {
+      console.log(data);
+      document.querySelector("#text").textContent = '"' + data.content + '"';
+      document.querySelector("#author").textContent = "-" + data.author;   
+      document.querySelector("#tweet-btn").innerHTML = `<a href="https://twitter.com/intent/tweet?text=${data.content} -${data.author}" target="_blank" id="tweet-quote" class="text-light">Tweet</a>` 
+    });
+  }
+  </script>
+  </body>
+</html>
