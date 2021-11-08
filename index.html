@@ -7,13 +7,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+      .roboto-slab {font-family: 'Roboto-Slab', sans-serif;}
+    </style>
     <title>Random Quotes</title>
   </head>
   <body onload="randomQuote()">
     <section class="container my-5">
     <div id="quote-box" class="shadow p-4 rounded">
-      <div id="text" class="mb-3 h1 text-center"></div>
+      <div id="text" class="mb-3 h1 text-center roboto-slab"></div>
       <div id="author" class="mb-3"></div>
       <button onclick="randomQuote()" id="new-quote" class="btn btn-primary me-3">New Quote</button>
       <button class="btn btn-primary" id="tweet-btn"></button>
