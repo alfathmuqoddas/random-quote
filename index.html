@@ -19,15 +19,15 @@
   </head>
   <body onload="randomQuote()">
     <section class="container vh-100 d-flex align-items-center">
-    <div id="quote-box" class="shadow p-4 rounded w-100">
-      <div id="text" class="mb-3 h1 text-center roboto-slab"></div>
-      <div id="author" class="mb-3"></div>
-      <button onclick="randomQuote()" id="new-quote" class="btn btn-primary me-1">New Quote</button>
-      <button class="btn btn-primary" id="tweet-btn"></button>
-    </div> 
-      <p class="mt-5">by Alfath Muqoddas</p>
-  </section>
-  
+      <div id="quote-box" class="shadow p-4 rounded w-100">
+        <div id="text" class="mb-3 h1 text-center roboto-slab"></div>
+        <div id="author" class="mb-3"></div>
+        <button onclick="randomQuote()" id="new-quote" class="btn btn-primary me-1">New Quote</button>
+        <button class="btn btn-primary" id="tweet-btn"></button>
+      </div> 
+    </section>
+    <p class="mt-5">by Alfath Muqoddas</p>
+    
   <script>
   const randomQuote = () => {
     const url = "https://api.quotable.io/random";
