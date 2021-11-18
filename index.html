@@ -15,7 +15,7 @@
     <div id="quote-box" class="shadow p-4 rounded">
       <div id="text" class="mb-3 h1 text-center"></div>
       <div id="author" class="mb-3"></div>
-      <button onclick="randomQuote()" id="new-quote" class="btn btn-primary me-3">New Quote</button>
+      <button onclick="randomQuote()" id="new-quote" class="btn btn-primary me-2">New Quote</button>
       <button class="btn btn-primary" id="tweet-btn"></button>
     </div> 
       <p class="mt-5">by Alfath Muqoddas</p>
@@ -28,7 +28,7 @@
       console.log(data);
       document.querySelector("#text").textContent = '"' + data.content + '"';
       document.querySelector("#author").textContent = "-" + data.author;   
-      document.querySelector("#tweet-btn").innerHTML = `<a href="https://twitter.com/intent/tweet?text=${data.content} -${data.author}" target="_blank" id="tweet-quote" class="text-light">Tweet</a>` 
+      document.querySelector("#tweet-btn").innerHTML = `<a href="https://twitter.com/intent/tweet?text=${data.content} -${data.author}" target="_blank" id="tweet-quote" class="text-light text-decoration-none">Tweet</a>` 
     });
   }
   </script>
